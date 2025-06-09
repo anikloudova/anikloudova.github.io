@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LUNAZ THE PRAGUE - Hotel</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+
+</head>
+<body>
+   <header>
+    <div class="header-content">
+        <h1 class="hotel-name">The Lunaz Prague</h1><!--nazev hotelu-->
+        <nav>
+            <ul> <!--menu-->
+                <li><a href="#rooms">POKOJE</a></li>
+                <li><a href="#pricing">CENÍK</a></li>
+                <li><a href="#reservation">REZERVACE</a></li>
+                <li><a href="#reviews">RECENZE</a></li>
+                <li><a href="#contact">KONTAKTY</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<div class="hero-image"><!--foto hotelu-->
+    <img src="images/hotelova_mistnost.jpg" alt="Foto hotelu">
+    <div class="overlay">
+        <h3>Vítejte v hotelu srdce Prahy</h3>
+        <h1>The Lunaz Prague</h1>
+    </div>
+</div>
+ 
+<div class="countdown-container"><!--countdown sekce-->
+    <h2 class="countdown-title">Zlevněné ubytování!</h2><br>
+    <p>Využijte slevu na ubytovaní v pokoji kategorie <b>Deluxe Pokoj</b> za <b>2300Kč</b> za noc!<br>Nabídka je časově omezena<br><br>Sleva končí za:</p>
+    <div id="countdown" class="countdown"></div>
+</div>
+
+<div class="posunuti_pokoju">
+<section id="rooms"><!--sekce pro pokoje-->
+   <h2>NAŠE POKOJE</h2>
+  <div class="room-container">
+    <div class="room-info">
+      <h4 id="room-name">Deluxe Pokoj</h4>
+      <p id="room-description">
+        Prostorný a moderně zařízený pokoj s výhledem.
+      </p>
+      <div class="room-navigation">
+        <button id="prev" onclick="prevRoom()">prevRoom</button>
+        <button id="next" onclick="nextRoom()">nextRoom</button>
+      </div>
+    </div>
+    <div class="room-display">
+      <img id="room-image" src="images/deluxe_room.jpg" alt="Premium Pokoj" class="room-img">
+    </div>
+  </div>
+</section>
+</div>
+
+<div class="posunuti_ceniku">
+<section id="pricing"><!--sekce pro cenik-->
+  <h2>CENÍK</h2>
+  <div class="pricing-container">
+    <div class="pricing-item">
+      <h4>Standard Pokoj</h4>
+      <p>Cena: 1500 Kč/noc</p>
+      <img src="images/standard_room.jpg" alt="Standardní Pokoj" class="pricing-img">
+    </div>
+    <div class="pricing-item">
+      <h4>Deluxe Pokoj</h4>
+      <p>Cena: 2300 Kč/noc
+      </p>
+      <img src="images/deluxe2_room.jpg" alt="Deluxe Pokoj" class="pricing-img">
+    </div>
+    <div class="pricing-item">
+      <h4>Premium Pokoj</h4>
+      <p>Cena: 3600 Kč/noc</p>
+      <img src="images/deluxe_room.jpg" alt="Prémiový Pokoj" class="pricing-img">
+    </div>
+  </div>
+</section>
+</div>
+
+<div class="posunuti_rezervace"><!--sekce pro rezervaci-->
+<section id="reservation">
+    <div class="reservation-container">
+        <h2 class="reservation-title">REZERVACE</h2>
+        <div class="reservation-form">
+            <form action="reservation.php" method="post">
+                <label for="first_name">Jméno:</label>
+                <input type="text" id="first_name" name="first_name" required><br>
+
+                <label for="last_name">Příjmení:</label>
+                <input type="text" id="last_name" name="last_name" required><br>
+
+                 <label for="room-type">Vyberte typ pokoje:</label>
+                  <select id="room-type" name="room-type">
+                   <option value="standard">Standartní pokoj</option>
+                   <option value="deluxe">Deluxe pokoj</option>
+                   <option value="premium">Premium pokoj</option>
+                  </select> <br>
+
+                <label for="arrival_date">Datum příjezdu:</label>
+                <input type="date" id="arrival_date" name="arrival_date" required><br>
+
+                <label for="departure_date">Datum odjezdu:</label>
+                <input type="date" id="departure_date" name="departure_date" required><br>
+
+                <label for="phone">Telefonní číslo:</label>
+                <input type="tel" id="phone" name="phone" required><br>
+
+                <input type="submit" value="Rezervovat">
+            </form>
+        </div>
+    </div>
+</section>
+</div>
+
+<div class="posunuti_recenzi"><!--sekce pro recenze-->
+<section id="reviews"><!--sekce pro recenze-->
+<div class="reviews-section">
+    <h2 class="reviews-title">NAŠE RECENZE</h2>
+    
+    <div class="review">
+        <p class="review-text">"Byli jsme velmi spokojeni s naším pobytem. Moc útulné pokoje!"</p>
+        <p class="review-author">Anna Nováková ★★★★★</p>
+    </div>
+
+    <div class="review">
+        <p class="review-text">"Skvělé služby a přátelský personál. Určitě se vrátíme!"</p>
+        <p class="review-author">Petr Svoboda ★★★★</p>
+    </div>
+
+    <div class="review">
+        <p class="review-text">"Krásné prostředí a komfortní pokoje. Děkujeme!"</p>
+        <p class="review-author">Jana Černá ★★★★★</p>
+    </div>
+
+    <div class="review">
+        <p class="review-text">"Hotel se mi velmi líbil. Doporučuji!"</p>
+        <p class="review-author">Tomáš Horák ★★★★</p>
+    </div>
+</div>
+</section>
+</div>
+
+<div class="posunuti_loga">
+<h1 class="hotel-name">The Lunaz Prague</h1><!--nazev - logo-->
+</div>
+
+<div class="posunuti_kontaktu">
+<section id="contact"><!--sekce pro kontakty-->
+<div class="contact-section">
+    <div class="contact-info">
+        <h2 class="contact-title">KONTAKTY</h2>
+        <p>Tel: +420 793 577 891</p>
+        <p>Email: thelunazprague@gmail.com</p>
+    </div>
+    
+    <div class="spacer"></div>
+
+    <div class="address-info">
+        <h2 class="address-title">ADRESA</h2>
+        <p>Vinohrady<br>130 00 Praha 3<br>Belgická 445/5</p>
+    </div>
+</div>
+</section>
+</div>
+
+    <footer>
+        <p>&copy; 2025 THE LUNAZ PRAGUE</p>
+    </footer>
+</body>
+</html>
